@@ -142,6 +142,7 @@ jQuery(document).ready(function($) {
         (function() {
                 const bttn = document.querySelector('button.particles-button2');
                 const bttnBack = document.querySelector('button.action');
+
                 
                 let particlesOpts = {
                     duration: 500,
@@ -181,6 +182,7 @@ jQuery(document).ready(function($) {
                         buttonVisible = !buttonVisible;
                     }
                 });
+                
 
         })();
     } 
@@ -201,6 +203,10 @@ jQuery(document).ready(function($) {
               items: 3,
               nav: false
             },
+            600:{
+                items: 4,
+                nav: false
+            },
             1200: {
               items: 6,
               nav: true,
@@ -219,6 +225,67 @@ jQuery(document).ready(function($) {
                 $('#ourClientes .owl-dots .owl-dot').not(this).removeClass('active');
                 $('#ourClientes .owl-carousel').trigger('next.owl.carousel');
                 $(this).addClass('active');
+            }
+        });
+    }
+    
+    // portfolio responsive
+    {
+        const simpleFilters = document.querySelectorAll('.simplefilter li');
+
+        Array.from(simpleFilters).forEach((node) =>
+            node.addEventListener('click', function() {
+                simpleFilters.forEach((filter) =>
+                    filter.classList.remove('active'));
+                    node.classList.add('active');
+            })
+        );
+
+        // Expose this filterizr as a global for debugging
+        window.filterizr = new window.Filterizr('.filtr-container', {
+            controlsSelector: '.fltr-controls',
+            gutterPixels: 24,
+            spinner: {
+                enabled: true,
+            },
+        });
+        
+        // portfolio hover effect
+        {
+            $('.portfolio_item').tilt({
+                glare: true,
+                maxGlare: .2
+            });
+            $('.zmdi').tilt({
+                scale: 1.2
+            });
+        }
+    }
+
+    // footer form valid
+    {
+
+        $('#exampleModal form').submit(function(event) {
+            var count = 0;
+            for(var i = 0; i < $('#exampleModal form input').length; i++){
+                if(!$('#exampleModal form input').eq(i).val()){
+                    $('#exampleModal form input').eq(i).addClass('error');
+                    $('#exampleModal form input').eq(i).next('.modal-input-label').addClass('error');
+                    count++;
+                }else{
+                    $('#exampleModal form input').eq(i).removeClass('error');
+                    $('#exampleModal form input').eq(i).next('.modal-input-label').removeClass('error');
+                }
+            }
+            console.log($('#exampleModal form .custom-control-input'))
+            if(!$('#exampleModal form .custom-control-input').prop( "checked")){
+                $('#exampleModal form .custom-control-input').addClass('error');
+                count++;
+            }
+            if(count == 0){
+                return true;
+            }else {
+                return false;
             }
         });
     }
