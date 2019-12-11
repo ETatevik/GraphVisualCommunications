@@ -1,12 +1,9 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Shape-overlays-master js and css -->
-    <!-- <script src="./!/components/shape-overlays-master/js/demo3.js"></script>
-    <script src="./!/components/shape-overlays-master/js/easings.js"></script>
-    <link rel="stylesheet" href="./!/components/shape-overlays-master/css/demo.css">
-    <link rel="stylesheet" href="./!/components/shape-overlays-master/css/normalize.css"> -->
+    
+    <title>Graph - Visual Communications</title>
+    <link rel="shortcut icon" href="img/logoh.png">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,24 +11,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Optional CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="css/lavalamp_test.css">
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/particles.css" />
+    <link rel="stylesheet" type="text/css" href="css/graphMenu.css" />
+
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/portfolio.css">
-    <title>AOS Animations</title>
 </head>
 
 <body>
-    <header>
+    <header class="notHomePageHeader">
         <div class="overlay px-3 px-md-0">
             <div class="container">
                 <div class="row header_content">
-                    <div class="col-4 px-0">
+                    <div class="col-4 pl-1 pr-0 px-sm-0  d-flex d-sm-block align-items-center">
                         <div class="languages">
                             <a class="lang" href="#">EN</a>
                             <a class="lang active" href="#">RU</a>
@@ -40,11 +37,13 @@
                     <div class="col-4 text-center">
                         <img src="img/logoxs.svg" alt="">
                     </div>
-                    <div class="col-4  pr-0 d-flex align-items-center justify-content-end">
-                        <h5 class="pr-3 text-white font-weight-bold">Меню</h5>
-                        <div class="demo-3 ">
-                            <div class="hamburger js-hover">
-                                <linearGradient gradientUnits="userSpaceOnUse" id="MyGradient" x1="100%" y1="100%" x2="0%" y2="100%"><stop stop-color="#A9F0C5" offset="0"></stop><stop stop-color="#54C7F4" offset="1"></stop></linearGradient>
+                    <div class="col-4 pr-1  pr-sm-0 d-flex align-items-center justify-content-end">
+                        <div class="graphMenu" >
+                            <div class="hamburger hamburger--graphMenu js-hover">
+                                <div class="menu-graph-text">
+                                    <p class="menu mb-0 show">Меню</p> 
+                                    <p class="closeMenu mb-0">Закрыть</p>
+                                </div>
                                 <div class="hamburger__line hamburger__line--01">
                                     <div class="hamburger__line-in hamburger__line-in--01"></div>
                                 </div>
@@ -61,18 +60,52 @@
                                     <div class="hamburger__line-in hamburger__line-in--cross02"></div>
                                 </div>
                             </div>
-                            <main class="main main--demo-3">
-                                <div class="content content--demo-3">
+                            <main class="main main--graphMenu">
+                                <div class="content content--graphMenu">
                                     
-                                    <div class="global-menu">
-                                        <div class="global-menu__wrap">
-                                            <a class="global-menu__item global-menu__item--demo-3" href="#">Home</a>
-                                            <a class="global-menu__item global-menu__item--demo-3" href="#">Introduction</a>
-                                            <a class="global-menu__item global-menu__item--demo-3" href="#">Learning</a>
-                                            <a class="global-menu__item global-menu__item--demo-3" href="#">Resources</a>
+                                    <div class="global-menu w-100">
+                                        <div class="container">
+                                            <div class="d-flex flex-column w-100 justify-content-center justify-content-xl-between h-100">
+                                                <div class="d-flex flex-row  w-100 justify-content-center justify-content-lg-between align-items-center">
+                                                    <div class="global-menu__wrap">
+                                                        <a class="global-menu__item global-menu__item--graphMenu line-menu-item" href="#">Кто мы?</a>
+                                                        <a class="global-menu__item global-menu__item--graphMenu" href="#">Что мы предлагаем</a>
+                                                        <a class="global-menu__item global-menu__item--graphMenu" href="#">Портфолио и клиенты</a>
+                                                        <a class="global-menu__item global-menu__item--graphMenu" href="#">Контакты</a>
+                                                        <a class="global-menu__item global-menu__item--graphMenu" href="#">Блог</a>
+                                                    </div>
+                                                    <div class="global-menu__wrap global-menu__wrap_small d-none d-lg-block">
+                                                        <h2 class=" mb-2 global-menu__item global-menu__item--graphMenu">Новые проекты</h2>
+                                                        <a class="ml-4 global-menu__item global-menu__item--graphMenu" href="#">Инфографика Moscow Raceway</a>
+                                                        <a class="ml-4 global-menu__item global-menu__item--graphMenu" href="#">Инфографика для АКОРТ</a>
+                                                        <a class="ml-4 global-menu__item global-menu__item--graphMenu" href="#">Презентация МИКРОТЕХ</a>
+                                                        <a class="ml-4 global-menu__item global-menu__item--graphMenu" href="#">ООПТ Байкал</a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-none d-xl-flex global-menu__wrap_social-links flex-row w-100 justify-content-between align-items-end">
+                                                    <ul class="list-unstyled text-white mb-0">
+                                                        <li>Адрес</li>
+                                                        <li>Москва,</li>
+                                                        <li>Берсеневский переулок,2 строение 1</li>
+                                                    </ul>
+                                                    <ul class="list-unstyled text-white mb-0">
+                                                        <li>Позвоните или напишите нам</li>
+                                                        <li>+7 495 646 68 87</li>
+                                                        <li>weloveyourletters@graph.company</li>
+                                                    </ul>
+                                                    <div class="global-menu__wrap social-links text-center d-flex flex-row  text-sm-right text-white">
+                                                        <a class="global-menu__item global-menu__item--graphMenu" href="#"><i class="zmdi zmdi-behance "></i></a>
+                                                        <a class="global-menu__item global-menu__item--graphMenu" href="#"><i class="zmdi zmdi-vimeo"></i></a>
+                                                        <a class="global-menu__item global-menu__item--graphMenu" href="#"><i class="zmdi zmdi-instagram "></i></a>
+                                                        <a class="global-menu__item global-menu__item--graphMenu" href="#"><i class="zmdi zmdi-facebook "></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <linearGradient gradientUnits="userSpaceOnUse" id="MyGradient" x1="100%" y1="100%" x2="0%" y2="100%"><stop stop-color="#A9F0C5" offset="0"></stop><stop stop-color="#54C7F4" offset="1"></stop></linearGradient>        
                                         <path class="shape-overlays__path"></path>
                                         <path class="shape-overlays__path"></path>
                                         <path class="shape-overlays__path"></path>
@@ -82,37 +115,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="row header_descritpion_content">
-                    <div class="col-lg-10 ">
-                        <h2 >Малоизвестные дерби Европы</h2>
-                        <p class="mt-5 mb-5">Дерби – это украшение футбола, это принципиальные противостояния, которые приковывают к себе внимание миллионов болельщиков. Но есть малоизвестные, но не менее значимые в историческом плане и для местных ценителей футбола матчи, историю которых мы и попытались осветить в нашей инфографике.</p>
+                <div class="row header_descritpion_content" data-aos="zoom-in-down">
+                    <div class="col-lg-10 py-4">
+                        <h3 >Малоизвестные дерби Европы</h3>
+                        <p class="my-sm-5 my-3">Дерби – это украшение футбола, это принципиальные противостояния, которые приковывают к себе внимание миллионов болельщиков. Но есть малоизвестные, но не менее значимые в историческом плане и для местных ценителей футбола матчи, историю которых мы и попытались осветить в нашей инфографике.</p>
                     </div>
                 </div>
-                <div><span></span></div>
             </div>
         </div>
     </header>
 
-                    <div class="filtr-container">
-                        <div class="filtr-item portfolio_item" data-category="5" data-sort="Busy streets"></div>
-                    </div>
-
     <section id="content">
         <div class="overlay px-3 px-md-0">
             <div class="container">
-                <div class="content-top">
-                    <div class="row d-flex flex-wrap-reverse justify-content-between">
-                        <div class="col-lg-7 ">
-                            <div class="box-gallery text-center my-3">
-                                <div class="box"> 
-                                    <img src="img/Image 16.png">
-                                </div>
+                <div class="row d-flex flex-wrap-reverse justify-content-between">
+                    <div class="col-12 my-3 mt-lg-0">
+                        <div class="box-gallery text-center portfolio-box-content-start" data-aos="fade-down-right">
+                            <div class="box">
+                                <div class="textContent">
+                                    <img src="img/Image 16.png" class="img-fluid">  
+                                </div> 
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="logo text-center bg-white my-3 p-3">
+                    </div>
+                    <div class="col-lg-3 text-center offset-0 offset-lg-9">
+                        <div class="logo text-center bg-white  portfolio-box-content-end" data-aos="fade-down-left">
                             <img src="./img/Image 17.png" alt="Sports">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,7 +149,7 @@
     </section>
 
     <section id="clients">
-        <div class="overlay px-3 px-md-0">
+        <div class="overlay">
             <div class="container">
                 <div class="row heading">
                     <div class="col-12">
@@ -130,47 +158,141 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
-                        <div class="owl-carousel owl-theme">
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
-                            <a class="item" href="#" target="_blank">
-                              <img src="http://193.176.78.57:3077/images/clients/52493-1557332961658.svg" alt="">
-                            </a>
+                    <div class="col-12" id="ourClientes">
+                        <div class="owl-carousel">
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/VTB.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Rostelecom.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Samsung.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Kaspersky.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Gazprom.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Uber.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Deutsche_Bank.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Aeroflot.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/VDNH.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Sberbank.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/sukhoi-civil-aircraft.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/ingosstrax.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Metalloinvest.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/X5_retail_group.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/rosatom.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Baker-Hughes-Logo.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Philips_logo_new.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Skolkovo.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/Whirlpool.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/indesit.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/MIG.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/AFTI.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" target="_blank">
+                                  <img src="img/clients/hotpoint.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-nav d-none d-xl-block">
+                            <div class="owl-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23.918" height="13.932" viewBox="0 0 23.918 13.932">
+                                    <path id="Path_1" data-name="Path 1" d="M23.918,1.973a.753.753,0,0,1-.247.555L12.514,13.685a.747.747,0,0,1-1.11,0L.247,2.527a.747.747,0,0,1,0-1.11L1.418.247a.747.747,0,0,1,1.11,0l9.432,9.432L21.391.247a.747.747,0,0,1,1.11,0l1.171,1.171A1.107,1.107,0,0,1,23.918,1.973Z" fill="#fff"/>
+                                </svg>
+                            </div>
+                            <div class="owl-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23.918" height="13.932" viewBox="0 0 23.918 13.932">
+                                    <path id="Path_2" data-name="Path 2" d="M23.918,1.973a.753.753,0,0,1-.247.555L12.514,13.685a.747.747,0,0,1-1.11,0L.247,2.527a.747.747,0,0,1,0-1.11L1.418.247a.747.747,0,0,1,1.11,0l9.432,9.432L21.391.247a.747.747,0,0,1,1.11,0l1.171,1.171A1.107,1.107,0,0,1,23.918,1.973Z" fill="#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="owl-dots d-blcok d-xl-none">
+                            <div class="owl-dot active"></div>
+                            <div class="owl-dot"></div>
+                            <div class="owl-dot"></div>
                         </div>
                     </div>
                 </div>
@@ -197,8 +319,11 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-md-12 col-lg-4 d-flex justify-content-lg-end justify-content-md-center">
-                        <button class="write_us_btn" data-toggle="modal" data-target="#exampleModal">Написать нам</button>
+                        <div class="particle-btn-effect">
+                            <button type="button" class="write_us_btn particles-button2" data-toggle="modal" data-target="#exampleModal">Написать нам</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -248,12 +373,12 @@
         </div>
     </footer>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1>Форма обратной связи</h1>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close action" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -266,33 +391,37 @@
                     </p>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <div class="input-group flex-nowrap">
-                                <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
-                                <div class="modal-input-label">Имя</div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <form action="index.html">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping">
+                                        <div class="modal-input-label">Имя</div>
+                                    </div>
+                                    <div class="input-group flex-nowrap">
+                                        <input type="email" class="form-control" aria-label="Useremail" aria-describedby="addon-wrapping">
+                                        <div class="modal-input-label">Почта</div>
+                                    </div>
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" aria-label="Usertelephone" aria-describedby="addon-wrapping">
+                                        <div class="modal-input-label">Телефон</div>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">Отправить</button>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">
+                                            даю согласие на
+                                            <a href="#">
+                                                обработку персональных данных
+                                            </a>
+                                        </label>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="input-group flex-nowrap">
-                                <input type="email" class="form-control" aria-label="Useremail" aria-describedby="addon-wrapping">
-                                <div class="modal-input-label">Почта</div>
+                            <div class="d-none d-md-block col-md-6">
+                                <img data-tilt src="./img/planer.svg" alt="planner" class="img-fluid">
                             </div>
-                            <div class="input-group flex-nowrap">
-                                <input type="text" class="form-control" aria-label="Usertelephone" aria-describedby="addon-wrapping">
-                                <div class="modal-input-label">Телефон</div>
-                            </div>
-                            <button class="btn btn-primary" type="submit">Отправить</button>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    даю согласие на
-                                    <a href="#">
-                                        обработку персональных данных
-                                    </a>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col display-none">
-                            <img src="./img/planer.svg" alt="planner">
                         </div>
                     </div>
                 </div>
@@ -304,14 +433,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- Optional JS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/jquery.filterizr.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.lavalamp.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/demo.js"></script>
-    <script src="js/easings.js"></script>
-    <script src="js/demo3.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/owl.highlight.js"></script>
+    <script src="js/owl.app.js"></script>
+    <script src='js/anime.min.js'></script>
+    <script src='js/particles.js'></script>
+    <script src="js/vanilla.filterizr.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/graphEasings.js"></script>
+    <script src="js/graphMenuDemo.js"></script>
 
     <!-- Main JS -->
     <script src="js/main.js"></script>
