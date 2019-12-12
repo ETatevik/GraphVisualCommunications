@@ -22,6 +22,7 @@ body {
 
 body {
     color: #111;
+    overflow-x: hidden;
 }
 
 body, input, select, textarea, button {
@@ -43,14 +44,13 @@ a, input, select, textarea, button, section#portfolio .simplefilter li, section#
     padding-right: 0;
 }
 
-
 /* Main */
 
 h2{font-size: 28px;}
 header {
     min-height: 100vh;
     /*padding: 0 0 30px;*/
-    background: linear-gradient(#54C7F4 0%, #A9F0C5 100%);
+    background: linear-gradient(90deg,#54C7F4, #A9F0C5);
 }
 header.notHomePageHeader{
     min-height: auto;
@@ -146,7 +146,7 @@ header .overlay .header_descritpion_content button.write_us_btn {
 }
 .particle-btn-effect,
 .particles-button2 {
-    --color-item-bg: linear-gradient(120deg, #d299c2 0%, #fef9d7 100%);
+    --color-item-bg: linear-gradient(120deg, #d299c2, #fef9d7);
     --color-action: #c13a3a;
     --color-button-bg: #c13a3a;
     --color-button-text: #ffffff;
@@ -661,9 +661,40 @@ footer#foot .social_icons ul li a {
         right: -80px;
     }
 }
+/*debugging*/
+/*@media (min-width: 1966px) {
+    .container {
+        max-width: 1900px;
+    }
+}
+@media (min-width: 1866px) {
+    .container {
+        max-width: 1800px;
+    }
+}
+@media (min-width: 1766px) {
+    .container {
+        max-width: 1700px;
+    }
+}
+@media (min-width: 1666px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+@media (min-width: 1566px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+@media (min-width: 1466px) {
+    .container {
+        max-width: 1400px;
+    }
+}*/
 @media (min-width: 1366px) {
     .container {
-        max-width: 1280px;
+        max-width: 1300px;
     }
 }
 @media (max-width: 1200px) {
