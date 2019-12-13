@@ -51,6 +51,7 @@ header {
     min-height: 100vh;
     /*padding: 0 0 30px;*/
     background: linear-gradient(90deg,#54C7F4, #A9F0C5);
+    position: relative;
 }
 header.notHomePageHeader{
     min-height: auto;
@@ -60,7 +61,8 @@ header.errorPageHeader  .overlay  .container{
     justify-content: flex-start;
 }
 header>.overlay{
-    min-height: inherit;}
+    min-height: inherit;
+    position: relative;z-index: 800;}
 header .overlay .container {
     display: flex;
     flex-direction: column;
