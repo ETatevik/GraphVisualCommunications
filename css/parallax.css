@@ -60,3 +60,9 @@
 		height: 497px;
 	}
 }
+
+@media (max-width: 992px) {
+	.parallax{
+		display: none;
+	}
+}
