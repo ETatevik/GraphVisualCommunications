@@ -16,6 +16,7 @@
 	display: inline-block;
 	overflow: hidden;
 	will-change: transform;
+	width: 100%;
 }
 
 .particles-button {

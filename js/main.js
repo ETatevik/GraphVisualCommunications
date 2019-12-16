@@ -30,18 +30,18 @@ jQuery(document).ready(function($) {
 
     //scroll down header
     {
-        try {
-            hljs.initHighlightingOnLoad();
+        // try {
+        //     hljs.initHighlightingOnLoad();
 
-           $('.graph__scroll').on('click', function(e) {
-               $('html, body').animate({
-                   scrollTop: $('header').outerHeight()
-               }, 1200);
-           });
-        } catch(e) {
-            // statements
-            console.log(e);
-        }
+        //    $('.graph__scroll').on('click', function(e) {
+        //        $('html, body').animate({
+        //            scrollTop: $('header').outerHeight()
+        //        }, 1200);
+        //    });
+        // } catch(e) {
+        //     // statements
+        //     console.log(e);
+        // }
         
     }
 
@@ -52,21 +52,31 @@ jQuery(document).ready(function($) {
                 loop: true,
                 margin: 10,
                 responsiveClass: true,
+                nav: false,
                 responsive: {
                 0: {
                   items: 1,
-                  nav: true
+                  nav: true,
+                  autoplay:true,
+                  autoplayTimeout: 1500,
+                  autoplayHoverPause:true
                 },
                 768: {
                   items: 2,
                   nav: true,
-                  margin: 25
+                  margin: 25,
+                  autoplay:true,
+                  autoplayTimeout: 1500,
+                  autoplayHoverPause:true
                 },
                 1200: {
                   items: 3,
                   nav: false,
                   loop: false,
-                  margin: 50
+                  margin: 50,
+                  autoplay:false,
+                  autoplayTimeout: 1000,
+                  autoplayHoverPause:false
                 }
               }
             });
@@ -254,26 +264,33 @@ jQuery(document).ready(function($) {
         try {
             $('#ourClientes .owl-carousel').owlCarousel({
                 loop: true,
+                items: 6,
                 margin: 10,
                 responsiveClass: true,
                 autoplay:true,
-                autoplayTimeout:1000,
+                autoplayTimeout: 1000,
                 autoplayHoverPause:true,
-                dots: true,
-                dotsEach: true,
+                dots: false,
+                dotsEach: false,
                 responsive: {
                 0: {
                   items: 3,
-                  nav: false
+                  nav: false,
+                  dots: true,
+                  dotsEach: true,
                 },
                 600:{
                     items: 4,
-                    nav: false
+                    nav: false,
+                    dots: true,
+                    dotsEach: true,
                 },
                 1200: {
                   items: 6,
                   nav: true,
-                  margin: 30
+                  margin: 30,
+                  dots: false,
+                  dotsEach: false
                 }
               }
             });
@@ -282,13 +299,6 @@ jQuery(document).ready(function($) {
             })
             $('#ourClientes .owl-prev').click(function() {
                 $('#ourClientes .owl-carousel').trigger('prev.owl.carousel', [300]);
-            });
-            $('#ourClientes .owl-dots .owl-dot').click(function(event) {
-                if(!$(this).hasClass('active')){
-                    $('#ourClientes .owl-dots .owl-dot').not(this).removeClass('active');
-                    $('#ourClientes .owl-carousel').trigger('next.owl.carousel');
-                    $(this).addClass('active');
-                }
             });
         } catch(e) {
             // statements
@@ -300,23 +310,15 @@ jQuery(document).ready(function($) {
     // portfolio responsive
     {
         try {
-            const simpleFilters = document.querySelectorAll('.simplefilter li');
+            let fltr_controls = $('#portfolio .simplefilter .fltr-controls');
 
-            Array.from(simpleFilters).forEach((node) =>
-                node.addEventListener('click', function() {
-                    simpleFilters.forEach((filter) =>
-                        filter.classList.remove('active'));
-                        node.classList.add('active');
-                })
-            );
-
-            // Expose this filterizr as a global for debugging
-            window.filterizr = new window.Filterizr('.filtr-container', {
-                controlsSelector: '.fltr-controls',
-                gutterPixels: 24,
-                spinner: {
-                    enabled: true,
-                },
+            fltr_controls.click(function(event) {
+                
+                if(!$(this).hasClass('active')){
+                    $('#portfolio .simplefilter .fltr-controls').removeClass('active');
+                    $(this).addClass('active');
+                    filterItems($(this).attr('data-filter'));
+                }
             });
         
         } catch(e) {
@@ -340,7 +342,40 @@ jQuery(document).ready(function($) {
             // statements
             console.log(e);
         }
-        
+
+        function filterItems(group){
+            let filtr_items = $('#portfolio .filtr-container .filtr-item');
+
+            if(group != 'all'){
+               for(let i = 0; i < filtr_items.length; i++ ){
+                    let arrGroup = filtr_items.eq(i).attr('data-category').split(',');
+                    let count = 0;
+                    for(let j in arrGroup){
+                        if(arrGroup[j] == group){
+                            count++;
+                        }
+                    }
+                    if(count > 0){
+                        filtr_items.eq(i).show(800, function() {
+                            filtr_items.eq(i).removeClass('close'); 
+                        });
+                    }else{
+                        filtr_items.eq(i).hide(400, function() {
+                            filtr_items.eq(i).addClass('close');
+                        });
+                    }
+                } 
+            }else{
+                for(let i = 0; i < filtr_items.length; i++ ){
+                    filtr_items.eq(i).show(800, function() {
+                        filtr_items.eq(i).removeClass('close');
+                    });
+                } 
+            }
+
+            
+        }
+
     }
 
     // footer form valid

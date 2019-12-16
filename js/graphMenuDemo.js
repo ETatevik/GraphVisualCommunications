@@ -93,6 +93,7 @@ class ShapeOverlays {
       document.querySelector('.global-menu__wrap_social-links').classList.add('is-opened');
       document.querySelector('.menu-graph-text>.menu').classList.remove('show');
       document.querySelector('.menu-graph-text>.closeMenu').classList.add('show');
+      $('body').css('overflow', 'hidden');
 
       for (var i = 0; i < gNavItems.length; i++) {
         gNavItems[i].classList.add('is-opened');
@@ -102,6 +103,7 @@ class ShapeOverlays {
       document.querySelector('.global-menu__wrap_social-links').classList.remove('is-opened');
       document.querySelector('.menu-graph-text>.menu').classList.add('show');
       document.querySelector('.menu-graph-text>.closeMenu').classList.remove('show');
+      $('body').removeAttr('style');
       for (var i = 0; i < gNavItems.length; i++) {
         gNavItems[i].classList.remove('is-opened');
       }
@@ -118,6 +120,7 @@ class ShapeOverlays {
       document.querySelector('.global-menu__wrap_social-links').classList.add('is-opened');
       document.querySelector('.menu-graph-text>.menu').classList.remove('show');
       document.querySelector('.menu-graph-text>.closeMenu').classList.add('show');
+      $('body').css('overflow', 'hidden');
 
       for (var i = 0; i < gNavItems.length; i++) {
         gNavItems[i].classList.add('is-opened');
@@ -127,6 +130,8 @@ class ShapeOverlays {
       document.querySelector('.global-menu__wrap_social-links').classList.remove('is-opened');
       document.querySelector('.menu-graph-text>.menu').classList.add('show');
       document.querySelector('.menu-graph-text>.closeMenu').classList.remove('show');
+      $('body').removeAttr('style');
+      
       for (var i = 0; i < gNavItems.length; i++) {
         gNavItems[i].classList.remove('is-opened');
       }
