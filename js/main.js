@@ -1,4 +1,10 @@
 jQuery(document).ready(function($) {
+    // if page in loading first time save that in session 
+    if(sessionStorage.getItem('loading') == "ok"){
+        $('body').removeAttr('style');
+        $('header.start-loading-graph').removeClass('working');
+    }
+
     AOS.init({
         // Global settings:
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -155,6 +161,21 @@ jQuery(document).ready(function($) {
                         }
                     });
 
+                $('.modal, .modal-backdrop').click(function(event) {
+                    setTimeout(()=>{
+                           if(!$('.modal').hasClass('show')){
+                            if ( !particles.isAnimating() && !buttonVisible ) {
+                                particles.integrate({
+                                    duration: 800,
+                                    easing: 'easeOutSine'
+                                });
+                                buttonVisible = !buttonVisible;
+                            }
+                        } 
+                    },1000)
+                    
+                });
+
             })();
         } catch(e) {
             // statements
@@ -205,6 +226,21 @@ jQuery(document).ready(function($) {
                         buttonVisible = !buttonVisible;
                     }
                 });
+                 $('.modal, .modal-backdrop').click(function(event) {
+                    setTimeout(()=>{
+                           if(!$('.modal').hasClass('show')){
+                            if ( !particles.isAnimating() && !buttonVisible ) {
+                                particles.integrate({
+                                    duration: 800,
+                                    easing: 'easeOutSine'
+                                });
+                                buttonVisible = !buttonVisible;
+                            }
+                        } 
+                    },1000)
+                    
+                });
+
             })();
        } catch(e) {
            // statements

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap');
 *,
 *::after,
 *::before {
@@ -16,12 +17,12 @@
 	--path-fill-2: #54C3F2;
 	--path-fill-3: #00A3FF;
 	--color-title: #fff;
-	--font-family-title: 'Arapey', serif;
+	--font-family-title:  'Advent Pro', serif;
 	--font-size-title: 5vmax;
 	--font-weight-title: 400;
 	--color-menu: #fff;
 	--color-menu-hover: #fff;
-	--font-family-menu: 'Arapey', serif;
+	--font-family-menu:'Advent Pro', serif;
 	--font-size-menu: 4vmax;
 	--font-weight-menu: bolder;
 	--button-bg: transparent;
@@ -36,6 +37,7 @@ a {
 	color: #5d93d8;
 	color: var(--color-link);
 	outline: none;
+	font-family: 'Advent Pro';
 }
 
 a:hover,

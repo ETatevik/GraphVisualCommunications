@@ -107,4 +107,29 @@ class ShapeOverlays {
       }
     }
   });
+
+  $('.global-menu__item').click(function(event) {
+    if (overlay.isAnimating) {
+      return false;
+    }
+    overlay.toggle();
+    if (overlay.isOpened === true) {
+      elmHamburger.classList.add('is-opened-navi');
+      document.querySelector('.global-menu__wrap_social-links').classList.add('is-opened');
+      document.querySelector('.menu-graph-text>.menu').classList.remove('show');
+      document.querySelector('.menu-graph-text>.closeMenu').classList.add('show');
+
+      for (var i = 0; i < gNavItems.length; i++) {
+        gNavItems[i].classList.add('is-opened');
+      }
+    } else {
+      elmHamburger.classList.remove('is-opened-navi');
+      document.querySelector('.global-menu__wrap_social-links').classList.remove('is-opened');
+      document.querySelector('.menu-graph-text>.menu').classList.add('show');
+      document.querySelector('.menu-graph-text>.closeMenu').classList.remove('show');
+      for (var i = 0; i < gNavItems.length; i++) {
+        gNavItems[i].classList.remove('is-opened');
+      }
+    }
+  });
 }());

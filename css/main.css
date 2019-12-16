@@ -1,18 +1,29 @@
 /* Fonts - ApercuPro */
-@font-face {
+/*@font-face {
     font-family: 'ApRegular';
-    src: url('../fonts/ApercuPro/ApercuPro.ttf');
+    src:local('ApRegular'), url('../fonts/ApercuPro/ApercuPro.ttf') format('truetype'),
+        url('../fonts/ApercuPro/ApercuPro.eot') format('embedded-opentype'),
+        url('../fonts/ApercuPro/ApercuPro.woff') format('woff'),
+        url('../fonts/ApercuPro/ApercuPro.svg') format('svg');
 }
 @font-face {
     font-family: 'ApBold';
-    src: url('../fonts/ApercuPro/ApercuPro-Bold.ttf');
-}
+    src: url('../fonts/ApercuPro/ApercuPro-Bold.ttf') format('ttf'),
+        url('../fonts/ApercuPro/ApercuPro-Bold.eot') format('eot'),
+        url('../fonts/ApercuPro/ApercuPro-Bold.woff') format('woff'),
+        url('../fonts/ApercuPro/ApercuPro-Bold.svg') format('svg');
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap');
 
 /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,7 +45,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 body, input, select, textarea, button {
-    font: 16px/1.5 'ApRegular', sans-serif;
+    font: 16px/1.5 'Advent Pro', sans-serif;
 }
 input, select, textarea, button {
     outline: none !important;
@@ -85,18 +96,18 @@ header.start-loading-graph > .loading-body-scroll-mouse{
         position: relative;
     }
     .loading-body-scroll-mouse #imgGraphLoadingClone{
-        -webkit-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-        -o-transform: translateX(0%);
-        transform: translateX(0%);
+        -webkit-transform: translateX(0%) rotate(-90deg);
+        -ms-transform: translateX(0%) rotate(-90deg);
+        -o-transform: translateX(0%) rotate(-90deg);
+        transform: translateX(0%) rotate(-90deg);
         opacity: 1;
         transition: .5s;
     }
    .loading-body-scroll-mouse #imgGraphLoadingClone.move_right_hide{
-        -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        -o-transform: translateX(100%);
-        transform: translateX(100%);
+        -webkit-transform: translateX(100%) rotate(-90deg);
+        -ms-transform: translateX(100%) rotate(-90deg);
+        -o-transform: translateX(100%) rotate(-90deg);
+        transform: translateX(100%) rotate(-90deg);
         /*opacity: 0;*/
     }
     .loading-body-scroll-mouse .mouse-show{

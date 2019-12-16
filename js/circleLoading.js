@@ -50,6 +50,8 @@ jQuery(document).ready(function($) {
 			wheel:function(e){
 				if($(this).width() > 991){
 					if($('header.start-loading-graph').hasClass('working')){
+   						 // if page in loading first time save that in session 
+						sessionStorage.setItem('loading', 'ok');
 						$('.loading-body-scroll-mouse  .mouse-show').hide(0);
 							// $('header.start-loading-graph').removeAttr('style');
 							$('.loading-body-scroll-mouse #imgGraphLoadingClone').addClass('move_right_hide')
@@ -64,6 +66,8 @@ jQuery(document).ready(function($) {
 				if(e.which == 40){
 					if($(this).width() > 991){
 						if($('header.start-loading-graph').hasClass('working')){
+    						// if page in loading first time save that in session 
+							sessionStorage.setItem('loading', 'ok');
 							$('.loading-body-scroll-mouse  .mouse-show').hide(0);
 							// $('header.start-loading-graph').removeAttr('style');
 							$('.loading-body-scroll-mouse #imgGraphLoadingClone').addClass('move_right_hide')
