@@ -347,6 +347,14 @@ jQuery(document).ready(function($) {
     {
 
         try {
+            $('.modal, .modal-backdrop').click(function(event) {
+                for(var i = 0; i < $('#exampleModal form input').length; i++){
+                    $('#exampleModal form input').eq(i).removeClass('error');
+                    $('#exampleModal form input').eq(i).next('.modal-input-label').removeClass('error');
+                }
+                $('#exampleModal form .custom-control-input').removeClass('error');
+                
+            });
             $('#exampleModal form').submit(function(event) {
                 var count = 0;
                 for(var i = 0; i < $('#exampleModal form input').length; i++){

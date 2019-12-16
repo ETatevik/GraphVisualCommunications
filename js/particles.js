@@ -9,7 +9,7 @@
 
     function Particles(element, options) {
         this.el = getElement(element);
-        this.options = extend({color: getCSSValue(this.el, 'background-color')}, this.defaults, options);
+        this.options = extend({color: '#F4806F'}, this.defaults, options);
         this.init();
     }
 

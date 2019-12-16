@@ -686,6 +686,24 @@ footer {
 .modal-input-label.error{
     color: red;
 }
+
+.modal.show  .modal-content{
+     animation: modal_show .5s linear;
+}
+@keyframes modal_show {
+    from{
+        -webkit-transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg);
+        -o-transform: rotateY(90deg);
+        transform: rotateY(90deg);
+    }
+    to{
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+}
 footer#foot {
     background: linear-gradient(-90deg, #54C3F2, #a9f0c5);
 }
