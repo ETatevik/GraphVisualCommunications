@@ -335,7 +335,7 @@ header .overlay .header_descritpion_content button.write_us_btn {
 }
 .particle-btn-effect,
 .particles-button2 {
-    --color-item-bg: linear-gradient(120deg, #d299c2, #fef9d7);
+    --color-item-bg: linear-gradient(120deg, #d299c2 0%, #fef9d7 100%);
     --color-action: #c13a3a;
     --color-button-bg: #c13a3a;
     --color-button-text: #ffffff;
@@ -343,8 +343,6 @@ header .overlay .header_descritpion_content button.write_us_btn {
     --radius-button: 10px;
     --border-button: 0;
     display: inline-block;
-    position: relative;
-    overflow: hidden;
 }
 
 header .overlay .header_descritpion_bottom{
@@ -674,8 +672,13 @@ section#feedback .overlay .contact_list ul li {
     color: #000000;
     font-weight: normal;
 }
+
+section#feedback .overlay .contact_list ul li img{
+    width: 39px;
+    height: 39px
+}
 section#feedback .overlay .contact_list ul #contact_list_center{
-    margin: 35px 0px;
+    margin: 20px 0px;
 }
 section#feedback .overlay .contact_list ul li i {
     font-size: 20px;
@@ -683,15 +686,14 @@ section#feedback .overlay .contact_list ul li i {
     margin-right: 10px;
 }
 section#feedback .overlay .write_us_btn {
-    /*height: 70px;
-    width: 382px;*/
-    width: 100%;
-    max-width: 382px;
+    height: 70px;
+    width: 382px;
     line-height: 70px;
     border: none;
     background: #54C3F2;
     text-align: center;
     color: #fff;
+    font-size: 19px;
     display: block;
     margin: 50px auto 0px auto;
 }
@@ -714,6 +716,19 @@ footer {
 .modal.show  .modal-content{
      animation: modal_show .5s linear;
 }
+.modal-header .close{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: rgba(0,0,0,.5);
+}
+.modal-header .close:hover{
+    color: rgba(0,0,0,1);
+}
+.modal-header .close > span{
+    font-size: 40px;
+
+}
 @keyframes modal_show {
     from{
         -webkit-transform: rotateY(90deg);
@@ -733,6 +748,23 @@ footer#foot {
 }
 footer#foot .links {
     margin-bottom: 15px;
+}
+.links p>a{
+    position: relative;
+    padding: 2px 0;
+}
+.links p>a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: white;
+    height: 1px;
+    width: 0;
+    transition: .8s;
+    display: block;
+}
+.links p>a:hover::after{
+    width: 100%;
 }
 footer#foot p {
     color: #fff;
@@ -941,8 +973,9 @@ footer#foot .footer_info p a {
 @media (min-width: 1200px) {
     section#services .overlay .service_card{
         max-width: 385px;
-        margin-left: auto;
-        margin-right: auto;
+    }
+    section#services #weAreTolking{
+        padding: 0 100px;
     }
 }
 
@@ -982,10 +1015,16 @@ footer#foot .footer_info p a {
     header .overlay .container >.row.header_descritpion_content,
     header .overlay .container >.row.header_descritpion_bottom {
         margin-left: 0;
-        margin-right: 0;    
+        margin-right: 0; 
     }
-    header .overlay .header_descritpion_content button.write_us_btn{
-        width: 100%;
+    header .overlay .container{
+        overflow: hidden;
+    }
+    header .overlay .header_descritpion_content button.write_us_btn,
+    section#feedback .overlay .write_us_btn{
+        width: 92vw;
+       display: block;
+       margin: auto;
     }
     header .overlay .header_descritpion_content h2{
         font-size: 18px;

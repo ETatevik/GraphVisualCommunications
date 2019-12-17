@@ -40,12 +40,6 @@ a {
 	font-family: 'Advent Pro', sans-serif;
 }
 
-a:hover,
-a:focus {
-	color: #423c2b;
-	color: var(--color-link-hover);
-	outline: none;
-}
 
 .hidden {
 	position: absolute;
@@ -112,6 +106,17 @@ a:focus {
 	font-weight: var(--font-weight-menu);
 	font-size: 28px;
 	margin:0;
+	position: relative;
+}
+a.global-menu__item::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	background: white;
+	height: 1px;
+	width: 0;
+	transition: .8s;
+	display: block;
 }
 .global-menu__wrap_small > h2.global-menu__item{
 	font-size: 36px;
@@ -122,9 +127,11 @@ a:focus {
 	transform: translateY(100%);
 	transition-timing-function: ease-out;
 }
-
-.global-menu__item:hover {
-	color: var(--color-menu-hover);
+a.global-menu__item:hover{
+	color: #fff;
+}
+a.global-menu__item:hover::after {
+	width: 100%;
 }
 
 .global-menu__item.is-opened {
