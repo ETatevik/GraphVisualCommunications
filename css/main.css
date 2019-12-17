@@ -1,21 +1,4 @@
-/* Fonts - ApercuPro */
-/*@font-face {
-    font-family: 'ApRegular';
-    src:local('ApRegular'), url('../fonts/ApercuPro/ApercuPro.ttf') format('truetype'),
-        url('../fonts/ApercuPro/ApercuPro.eot') format('embedded-opentype'),
-        url('../fonts/ApercuPro/ApercuPro.woff') format('woff'),
-        url('../fonts/ApercuPro/ApercuPro.svg') format('svg');
-}
-@font-face {
-    font-family: 'ApBold';
-    src: url('../fonts/ApercuPro/ApercuPro-Bold.ttf') format('ttf'),
-        url('../fonts/ApercuPro/ApercuPro-Bold.eot') format('eot'),
-        url('../fonts/ApercuPro/ApercuPro-Bold.woff') format('woff'),
-        url('../fonts/ApercuPro/ApercuPro-Bold.svg') format('svg');
-}*/
-
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700&display=swap');
 /* Reset */
 * {
     margin: 0;
@@ -43,7 +26,9 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
-
+h1,h2,h3,h4,h5,h6,p,input,div,li,a,select, textarea, button{
+    font-family: 'Advent Pro', sans-serif !important;
+}
 body, input, select, textarea, button {
     font: 16px/1.5 'Advent Pro', sans-serif;
 }
@@ -264,25 +249,40 @@ header .overlay .header_descritpion_content {
     color: #fff;
     align-items: center;
 }
-header .overlay .header_descritpion_content > .header_descritpion_content_text.show{
+header .overlay .header_descritpion_content > .header_descritpion_content_text > h2,
+header .overlay .header_descritpion_content > .header_descritpion_content_text > p,
+header .overlay .header_descritpion_content > .header_descritpion_content_text > .particle-btn-effect{
+    opacity: 0;
+}
+header .overlay .header_descritpion_content > .header_descritpion_content_text.show > h2,
+header .overlay .header_descritpion_content > .header_descritpion_content_text.show > p,
+header .overlay .header_descritpion_content > .header_descritpion_content_text.show > .particle-btn-effect{
     -webkit-animation: header_descritpion_content_show .8s ease-in-out;
     -o-animation: header_descritpion_content_show .8s ease-in-out;
     animation:header_descritpion_content_show  .8s ease-in-out ;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
-
+header .overlay .header_descritpion_content > .header_descritpion_content_text.show > p{
+    animation-delay: .4s;
+}
+header .overlay .header_descritpion_content > .header_descritpion_content_text.show > .particle-btn-effect{
+    animation-delay: .8s;
+}
 @keyframes header_descritpion_content_show{
     0%{
-        -webkit-transform: translateY(50%) scale(.05);
-        -ms-transform: translateY(50%) scale(.05);
-        -o-transform: translateY(50%) scale(.05);
-        transform: translateY(50%) scale(.05);
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%) ;
+        -o-transform: translateY(50%);
+        transform: translateY(50%) ;
         opacity: 0;
     }
     100%{
-        -webkit-transform: translateY(0%) scale(1);
-        -ms-transform: translateY(0%) scale(1);
-        -o-transform: translateY(0%) scale(1);
-        transform: translateY(0%) scale(1);
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
         opacity: 1;
     }
 } 
@@ -671,6 +671,8 @@ section#feedback .overlay .box {
 section#feedback .overlay .contact_list ul li {
     list-style: none;
     cursor: pointer;
+    color: #000000;
+    font-weight: normal;
 }
 section#feedback .overlay .contact_list ul #contact_list_center{
     margin: 35px 0px;
@@ -727,7 +729,7 @@ footer {
     }
 }
 footer#foot {
-    background: linear-gradient(-90deg, #54C3F2, #a9f0c5);
+    background: linear-gradient(0deg, #54C3F2, #a9f0c5);
 }
 footer#foot .links {
     margin-bottom: 15px;
@@ -735,9 +737,11 @@ footer#foot .links {
 footer#foot p {
     color: #fff;
     margin-bottom: 0;
+    font-weight: bolder;
 }
 footer#foot p a {
     color: #fff;
+    font-weight: bolder;
 }
 footer#foot .social_icons {
     margin-top: 15px;
@@ -749,14 +753,19 @@ footer#foot .social_icons ul li {
     display: inline-block;
     list-style: none;
     margin-right: 10px;
-
 }
 footer#foot .social_icons ul li a {
     color: #fff;
     font-size: 21px;
+    font-weight: bolder;
 }
 
-
+.footer_info{
+    border-top: 1px solid #fff;
+}
+footer#foot .footer_info p a {
+    font-weight: 600;
+}
 
 /* -------------------------------------------------------------- */
 .modal,
@@ -929,6 +938,13 @@ footer#foot .social_icons ul li a {
     }
 }
 
+@media (min-width: 1200px) {
+    section#services .overlay .service_card{
+        max-width: 385px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 @media (max-width: 1200px) {
     section#services .overlay .service_card{

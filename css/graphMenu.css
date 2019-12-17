@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700&display=swap');
 *,
 *::after,
 *::before {
@@ -17,12 +17,12 @@
 	--path-fill-2: #54C3F2;
 	--path-fill-3: #00A3FF;
 	--color-title: #fff;
-	--font-family-title:  'Advent Pro', serif;
+	--font-family-title: 'Advent Pro', sans-serif;
 	--font-size-title: 5vmax;
 	--font-weight-title: 400;
 	--color-menu: #fff;
 	--color-menu-hover: #fff;
-	--font-family-menu:'Advent Pro', serif;
+	--font-family-menu:'Advent Pro', sans-serif;
 	--font-size-menu: 4vmax;
 	--font-weight-menu: bolder;
 	--button-bg: transparent;
@@ -37,7 +37,7 @@ a {
 	color: #5d93d8;
 	color: var(--color-link);
 	outline: none;
-	font-family: 'Advent Pro';
+	font-family: 'Advent Pro', sans-serif;
 }
 
 a:hover,
@@ -90,18 +90,6 @@ a:focus {
 	pointer-events: none;
 	z-index: 2100;
 }
-.line-menu-item{
-	position: relative;
-	padding-left: 66px;
-}
-.line-menu-item:before{
-	content: '';
-	border: 2px solid white;
-	position: absolute;
-	width: 66px;
-	top: 49%;
-	left: 0;
-}
 .global-menu > .container{
 	height: 100%;
 }
@@ -144,30 +132,6 @@ a:focus {
 	transform: translateY(0) rotate(0);
 	pointer-events: auto;
 	transition-timing-function: ease;
-}
-.global-menu__wrap_social-links{
-	margin-top: 20px;
-	transition-property: color;
-	transition-delay: 0;
-	transition-duration: .5s;
-	opacity: 0;
-}
-.global-menu__wrap_social-links .social-links > a{
-	color: #fff;
-    font-size: 18px;
-    padding: 0 6px;
-    cursor: pointer;
-}
-.global-menu__wrap_social-links .social-links > a:hover{
-	color: #54C3F2;
-}
-.global-menu__wrap_social-links li{
-	font-size: 15px;
-	font-weight: bolder;
-}
-.global-menu__wrap_social-links.is-opened{
-	opacity: 1;
-	transition-delay: .9s;
 }
 .global-menu__item:nth-of-type(1) {
 	transition-delay: 0s;
@@ -511,11 +475,6 @@ a:focus {
 @media screen and (max-width: 768px) {
 	.global-menu__item {
 		font-size: 30px;
-	}
-	.line-menu-item:before{
-		width: 30px;
-	}.line-menu-item{
-		padding-left: 30px;
 	}
 }
 

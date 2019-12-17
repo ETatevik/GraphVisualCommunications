@@ -90,7 +90,6 @@ class ShapeOverlays {
     overlay.toggle();
     if (overlay.isOpened === true) {
       elmHamburger.classList.add('is-opened-navi');
-      document.querySelector('.global-menu__wrap_social-links').classList.add('is-opened');
       document.querySelector('.menu-graph-text>.menu').classList.remove('show');
       document.querySelector('.menu-graph-text>.closeMenu').classList.add('show');
       $('body').css('overflow', 'hidden');
@@ -100,7 +99,6 @@ class ShapeOverlays {
       }
     } else {
       elmHamburger.classList.remove('is-opened-navi');
-      document.querySelector('.global-menu__wrap_social-links').classList.remove('is-opened');
       document.querySelector('.menu-graph-text>.menu').classList.add('show');
       document.querySelector('.menu-graph-text>.closeMenu').classList.remove('show');
       $('body').removeAttr('style');
@@ -117,7 +115,6 @@ class ShapeOverlays {
     overlay.toggle();
     if (overlay.isOpened === true) {
       elmHamburger.classList.add('is-opened-navi');
-      document.querySelector('.global-menu__wrap_social-links').classList.add('is-opened');
       document.querySelector('.menu-graph-text>.menu').classList.remove('show');
       document.querySelector('.menu-graph-text>.closeMenu').classList.add('show');
       $('body').css('overflow', 'hidden');
@@ -127,7 +124,6 @@ class ShapeOverlays {
       }
     } else {
       elmHamburger.classList.remove('is-opened-navi');
-      document.querySelector('.global-menu__wrap_social-links').classList.remove('is-opened');
       document.querySelector('.menu-graph-text>.menu').classList.add('show');
       document.querySelector('.menu-graph-text>.closeMenu').classList.remove('show');
       $('body').removeAttr('style');

@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
                   items: 1,
                   nav: true,
                   autoplay:true,
-                  autoplayTimeout: 1500,
+                  autoplayTimeout: 3500,
                   autoplayHoverPause:true
                 },
                 768: {
@@ -66,7 +66,7 @@ jQuery(document).ready(function($) {
                   nav: true,
                   margin: 25,
                   autoplay:true,
-                  autoplayTimeout: 1500,
+                  autoplayTimeout: 3500,
                   autoplayHoverPause:true
                 },
                 1200: {
@@ -75,7 +75,6 @@ jQuery(document).ready(function($) {
                   loop: false,
                   margin: 50,
                   autoplay:false,
-                  autoplayTimeout: 1000,
                   autoplayHoverPause:false
                 }
               }
@@ -268,7 +267,7 @@ jQuery(document).ready(function($) {
                 margin: 10,
                 responsiveClass: true,
                 autoplay:true,
-                autoplayTimeout: 1000,
+                autoplayTimeout: 4000,
                 autoplayHoverPause:true,
                 dots: false,
                 dotsEach: false,
