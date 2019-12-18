@@ -345,15 +345,11 @@ jQuery(document).ready(function($) {
                 responsive: {
                 0: {
                   items: 3,
-                  nav: false,
-                  dots: true,
-                  dotsEach: true,
+                  nav: false
                 },
                 600:{
                     items: 4,
-                    nav: false,
-                    dots: true,
-                    dotsEach: true,
+                    nav: false
                 },
                 1200: {
                   items: 6,
