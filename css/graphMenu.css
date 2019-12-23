@@ -1,8 +1,18 @@
-/*@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700&display=swap');*/
 @font-face {
-  font-family: "Apercu";
-  src: url("../fonts/Apercu/Apercu Regular.otf");
+    font-family: 'ApBold';
+    src: url('fonts/ApercuPro-Bold.ttf');
 }
+@font-face {
+    font-family: 'Apregular';
+    src: url('fonts/ApercuPro.ttf');
+}
+@font-face {
+    font-family: 'ApLight';
+    src: url('fonts/ApercuPro-Light.ttf');
+}
+/*font-family:  "Apregular", sans-serif;
+font-family:  "ApBold", sans-serif;
+font-family:  "ApLight", sans-serif;*/
 *,
 *::after,
 *::before {
@@ -21,12 +31,12 @@
 	--path-fill-2: #54C3F2;
 	--path-fill-3: #00A3FF;
 	--color-title: #fff;
-	--font-family-title:  "Apercu", sans-serif;
+	--font-family-title:  "ApBold", sans-serif;
 	--font-size-title: 5vmax;
 	--font-weight-title: 400;
 	--color-menu: #fff;
 	--color-menu-hover: #fff;
-	--font-family-menu: "Apercu", sans-serif;
+	--font-family-menu: "ApBold", sans-serif;
 	--font-size-menu: 4vmax;
 	--font-weight-menu: bolder;
 	--button-bg: transparent;
@@ -117,6 +127,7 @@ a.global-menu__item > span{
 	position: relative;
 	padding: 5px 0;
 	cursor: pointer;
+	font-family:  "ApBold", sans-serif;
 }
 a.global-menu__item > span::after{
 	content: '';
@@ -131,6 +142,7 @@ a.global-menu__item > span::after{
 .global-menu__wrap_small > h2.global-menu__item{
 	font-size: 36px;
 	font-weight: var(--font-weight-menu);
+	font-family:  "ApBold", sans-serif;
 }
 .global-menu__item--graphMenu {
 	transition: transform 0.1s, opacity 0.1s;
@@ -248,6 +260,7 @@ a.global-menu__item > span:hover::after {
 	transition-duration: .2s;
 	transition-delay: .1s;
 	opacity: 0;
+	font-family:  "ApBold", sans-serif;
 }
 .menu-graph-text>.closeMenu{
 	position: relative;

@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700&display=swap');
+@font-face {
+    font-family: 'Apregular';
+    src: url('fonts/ApercuPro.ttf');
+}
+/*font-family:  "Apregular", sans-serif;*/
 #imgGraphLoading,
 #imgGraphLoadingClone {
   width: 410px;
@@ -31,7 +35,7 @@
 	-ms-align-items: center;
 	align-items: center;
 	font-size: 30px;
-	font-family: 'Advent Pro', sans-serif;
+	font-family:  "Apregular", sans-serif;
 }
 
 #imgGraphLoading img,
