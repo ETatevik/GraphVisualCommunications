@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700&display=swap');*/
+
+@font-face {
+  font-family: "Apercu";
+  src: url("../fonts/Apercu/Apercu Regular.otf");
+}
 /* Reset */
 * {
     margin: 0;
@@ -27,10 +32,10 @@ body::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
 h1,h2,h3,h4,h5,h6,p,input,div,li,a,select, textarea, button{
-    font-family: 'Advent Pro', sans-serif !important;
+    font-family:  "Apercu", sans-serif !important;
 }
 body, input, select, textarea, button {
-    font: 16px/1.5 'Advent Pro', sans-serif;
+    font: 16px/1.5  "Apercu", sans-serif;
 }
 input, select, textarea, button {
     outline: none !important;
@@ -887,10 +892,10 @@ footer#foot .footer_info p a {
 }
 @media (min-width: 1500px) {
     section#clients #ourClientes .owl-prev{
-        left: -80px;
+        left: -25px;
     }
     section#clients #ourClientes .owl-next{
-        right: -80px;
+        right: -25px;
     }
 }
 /*debugging*/

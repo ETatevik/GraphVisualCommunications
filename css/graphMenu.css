@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700&display=swap');*/
+@font-face {
+  font-family: "Apercu";
+  src: url("../fonts/Apercu/Apercu Regular.otf");
+}
 *,
 *::after,
 *::before {
@@ -17,12 +21,12 @@
 	--path-fill-2: #54C3F2;
 	--path-fill-3: #00A3FF;
 	--color-title: #fff;
-	--font-family-title: 'Advent Pro', sans-serif;
+	--font-family-title:  "Apercu", sans-serif;
 	--font-size-title: 5vmax;
 	--font-weight-title: 400;
 	--color-menu: #fff;
 	--color-menu-hover: #fff;
-	--font-family-menu:'Advent Pro', sans-serif;
+	--font-family-menu: "Apercu", sans-serif;
 	--font-size-menu: 4vmax;
 	--font-weight-menu: bolder;
 	--button-bg: transparent;
@@ -37,7 +41,7 @@ a {
 	color: #5d93d8;
 	color: var(--color-link);
 	outline: none;
-	font-family: 'Advent Pro', sans-serif;
+	font-family:  "Apercu", sans-serif;
 }
 
 
@@ -99,6 +103,7 @@ a {
 	margin:0;
 	transition: transform 0.3s, opacity 0.3s;
 	transition-timing-function: ease-in;
+	cursor: default;
 }
 
 .global-menu__wrap_small > .global-menu__item{
@@ -106,9 +111,14 @@ a {
 	font-weight: var(--font-weight-menu);
 	font-size: 28px;
 	margin:0;
-	position: relative;
+	line-height: 46px;
 }
-a.global-menu__item::after{
+a.global-menu__item > span{
+	position: relative;
+	padding: 5px 0;
+	cursor: pointer;
+}
+a.global-menu__item > span::after{
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -130,7 +140,7 @@ a.global-menu__item::after{
 a.global-menu__item:hover{
 	color: #fff;
 }
-a.global-menu__item:hover::after {
+a.global-menu__item > span:hover::after {
 	width: 100%;
 }
 
@@ -238,6 +248,10 @@ a.global-menu__item:hover::after {
 	transition-duration: .2s;
 	transition-delay: .1s;
 	opacity: 0;
+}
+.menu-graph-text>.closeMenu{
+	position: relative;
+	left: -25px;
 }
 .menu-graph-text>.menu.show,
 .menu-graph-text>.closeMenu.show{

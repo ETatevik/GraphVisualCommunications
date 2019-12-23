@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+
     // if page in loading first time save that in session 
     if(sessionStorage.getItem('loading') == "ok"){
         $('body').removeAttr('style');
